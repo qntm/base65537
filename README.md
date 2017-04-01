@@ -54,7 +54,7 @@ For the Base65537 encoding we use an encoding alphabet of 65,537 Unicode charact
 
 ## How does Base65537 compare with Base65536?
 
-Horribly. The conversion described above takes O(*n*^2) time in the length of the input, because I couldn't figure out a faster way to do that base conversion. Even apart from this, the code is mostly appalling. Plus, it's like 200 kilobytes!
+Horribly. The conversion described above takes O(*n*<sup>2</sup>) time in the length of the input, because I couldn't figure out a faster way to do that base conversion. Even apart from this, the code is mostly appalling. Plus, it's like 200 kilobytes!
 
 Furthermore, Base65536 uses 256 padding characters for a total repertoire of 65,792, whereas Base65537 uses strictly 65,537 characters, making it less efficient in terms of space usage as well. In particular, the "largest" buffer which Base65537 can store in a 140-character Tweet is the 280-byte buffer [0xFF, 0x8C, 0x25, ... 0x8B], which encodes to "💩💩💩...💩" (140 poops long). So, unlike Base65536, Base65537 cannot store all possible 280-byte buffers in a Tweet, only most of them.
 
