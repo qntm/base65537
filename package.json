@@ -1,6 +1,6 @@
 {
   "name": "base65537",
-  "version": "65537.0.0",
+  "version": "65537.0.1",
   "description": "Like Base65536, but one better",
   "main": "index.js",
   "directories": {
@@ -9,7 +9,7 @@
   "scripts": {
     "test": "test.js"
   },
-  "author": "ferno",
+  "author": "qntm",
   "license": "MIT",
   "dependencies": {
   }
