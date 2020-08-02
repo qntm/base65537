@@ -1,7 +1,12 @@
 {
   "name": "base65537",
-  "version": "65537.0.1",
+  "version": "65537.0.2",
   "description": "Like Base65536, but one better",
+  "homepage": "https://github.com/qntm/base65537",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/qntm/base65537.git"
+  },
   "main": "index.js",
   "directories": {
     "test": "test"
