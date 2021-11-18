@@ -1,6 +1,3 @@
-'use strict'
-
-require('../src/eq-array.js')
 const bigInteger = require('../src/big-integer.js')
 
 console.log('bigInteger(10).increment()')

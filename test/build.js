@@ -1,5 +1,3 @@
-'use strict'
-
 const build = require('../src/build.js')
 
 const zxcvb = build(['z', 'x', 'c', 'v', 'b'])

@@ -1,6 +1,3 @@
-'use strict'
-
-require('../src/eq-array.js')
 const conv = require('../src/conv.js')
 
 console.log('conv(6, 8)')
