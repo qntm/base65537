@@ -1,6 +1,6 @@
 const build = require('../src/build.js')
 
-const zxcvb = build(['z', 'x', 'c', 'v', 'b'])
+const zxcvb = build('zxcvb')
 
 console.log('build().encode')
 console.log(zxcvb.encode(Buffer.from([])) === '')
