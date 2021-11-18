@@ -1,4 +1,3 @@
-require('../src/eq-array.js')
 const repertoire = require('../src/repertoire.js')
 const base65537 = require('../src/base65537.js')
 

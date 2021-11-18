@@ -1,5 +1,3 @@
-require('./eq-array.js')
-require('./buffer.js')
 require('./repertoire.js')
 require('./big-integer.js')
 require('./lexi.js')

@@ -6,8 +6,6 @@
   A big integer, that is.
 */
 
-'use strict'
-
 const bigInteger = require('./big-integer.js')
 
 module.exports = function (n) {

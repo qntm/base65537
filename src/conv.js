@@ -6,8 +6,6 @@
   this for anything but tweets >:)
 */
 
-'use strict'
-
 const bigInteger = require('./big-integer.js')
 
 module.exports = function (m, n) {

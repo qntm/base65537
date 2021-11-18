@@ -1,5 +1,4 @@
 const lexi = require('./lexi.js')
-const buffer = require('./buffer.js')
 const conv = require('./conv.js')
 const repertoire = require('./repertoire.js')
 
@@ -16,10 +15,10 @@ module.exports = function (chrs) {
 
   return {
     encode: function (buf) {
-      return rep.values2str(lexiC.lexi2values(bc(lexiB.values2lexi(buffer.buffer2values(buf)))))
+      return rep.values2str(lexiC.lexi2values(bc(lexiB.values2lexi([...buf.values()]))))
     },
     decode: function (str) {
-      return buffer.values2buffer(lexiB.lexi2values(cb(lexiC.values2lexi(rep.str2values(str)))))
+      return Buffer.from(lexiB.lexi2values(cb(lexiC.values2lexi(rep.str2values(str)))))
     }
   }
 }

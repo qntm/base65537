@@ -1,6 +1,3 @@
-'use strict'
-
-require('../src/eq-array.js')
 const lexi = require('../src/lexi.js')
 const b = lexi(256)
 
