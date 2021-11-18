@@ -1,4 +1,3 @@
-require('./pipe.js')
 const lexi = require('./lexi.js')
 const buffer = require('./buffer.js')
 const conv = require('./conv.js')
@@ -17,20 +16,10 @@ module.exports = function (chrs) {
 
   return {
     encode: function (buf) {
-      return buf
-        .pipe(buffer.buffer2values)
-        .pipe(lexiB.values2lexi)
-        .pipe(bc)
-        .pipe(lexiC.lexi2values)
-        .pipe(rep.values2str)
+      return rep.values2str(lexiC.lexi2values(bc(lexiB.values2lexi(buffer.buffer2values(buf)))))
     },
     decode: function (str) {
-      return str
-        .pipe(rep.str2values)
-        .pipe(lexiC.values2lexi)
-        .pipe(cb)
-        .pipe(lexiB.lexi2values)
-        .pipe(buffer.values2buffer)
+      return buffer.values2buffer(lexiB.lexi2values(cb(lexiC.values2lexi(rep.str2values(str)))))
     }
   }
 }

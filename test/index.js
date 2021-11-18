@@ -1,5 +1,4 @@
 require('./eq-array.js')
-require('./pipe.js')
 require('./buffer.js')
 require('./repertoire.js')
 require('./big-integer.js')

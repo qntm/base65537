@@ -1,6 +1,3 @@
-'use strict'
-
-require('../src/pipe.js')
 const base65537 = require('../src/base65537.js')
 const fs = require('fs')
 
@@ -33,6 +30,6 @@ const buffers = [
   // fs.readFileSync("./test/sample-files/lena_std.tif") // takes many ages
 ]
 buffers.forEach(function (buffer, i) {
-  console.log(buffer.pipe(base65537.encode).pipe(base65537.decode).equals(buffer))
+  console.log(base65537.decode(base65537.encode(buffer)).equals(buffer))
 })
 console.log()
