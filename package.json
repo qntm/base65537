@@ -1,13 +1,14 @@
 {
   "name": "base65537",
-  "version": "65537.0.2",
+  "version": "65538.0.0",
   "description": "Like Base65536, but one better",
   "homepage": "https://github.com/qntm/base65537",
   "repository": {
     "type": "git",
     "url": "git://github.com/qntm/base65537.git"
   },
-  "main": "src/base65537.js",
+  "type": "module",
+  "main": "src/index.js",
   "scripts": {
 		"lint": "npm run standard",
 		"pretest": "npm run lint",

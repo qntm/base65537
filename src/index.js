@@ -285,7 +285,7 @@ const bigIntToDigits = (bigInt, base) => {
   return digits
 }
 
-module.exports.encode = buf => bigIntToDigits(
+export const encode = buf => bigIntToDigits(
   digitsToBigInt(
     [...buf.values()],
     byteRange
@@ -300,7 +300,7 @@ module.exports.encode = buf => bigIntToDigits(
   })
   .join('')
 
-module.exports.decode = str => Buffer.from(
+export const decode = str => Buffer.from(
   bigIntToDigits(
     digitsToBigInt(
       [...str].map(chr => {

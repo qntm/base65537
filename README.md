@@ -15,15 +15,15 @@ npm install base65537
 ## Usage
 
 ```js
-var base65537 = require("base65537");
+import { encode, decode } from 'base65537'
 
-var buf = Buffer.from("d41d8cd98f00b204e9800998ecf8f11f", "hex");
+const buf = Buffer.from('d41d8cd98f00b204e9800998ecf8f11f', 'hex')
 
-var str = base65537.encode(buf); 
-console.log(str); // "䯕傺檸𥴏髌𡎱𦸜💩"
+const str = encode(buf)
+console.log(str) // "䯕傺檸𥴏髌𡎱𦸜💩"
 
-var buf2 = base65537.decode(str);
-console.log(buf.equals(buf2)); // true
+const buf2 = decode(str)
+console.log(buf.equals(buf2)) // true
 ```
 
 ## How does it work?
