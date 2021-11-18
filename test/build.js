@@ -4,6 +4,7 @@ const zxcvb = build(['z', 'x', 'c', 'v', 'b'])
 
 console.log('build().encode')
 console.log(zxcvb.encode(Buffer.from([])) === '')
+console.log(zxcvb.encode(Buffer.from([0])))
 console.log(zxcvb.encode(Buffer.from([0])) === 'z')
 console.log(zxcvb.encode(Buffer.from([1])) === 'x')
 console.log(zxcvb.encode(Buffer.from([4])) === 'b')
