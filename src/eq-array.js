@@ -1,24 +1,24 @@
 /**
-	Only used during tests.
+  Only used during tests.
 */
 
-"use strict";
+'use strict'
 
-if(Array.prototype.equals) {
-	throw Error("Array.prototype.equals already exists");
+if (Array.prototype.equals) {
+  throw Error('Array.prototype.equals already exists')
 }
 
-Array.prototype.equals = function(that) {
-	if(!Array.isArray(that)) {
-		return false;
-	}
-	if(this.length !== that.length) {
-		return false;
-	}
-	for(var i = 0; i < this.length; i++) {
-		if(this[i] !== that[i]) {
-			return false;
-		}
-	}
-	return true;
-};
+Array.prototype.equals = function (that) {
+  if (!Array.isArray(that)) {
+    return false
+  }
+  if (this.length !== that.length) {
+    return false
+  }
+  for (let i = 0; i < this.length; i++) {
+    if (this[i] !== that[i]) {
+      return false
+    }
+  }
+  return true
+}

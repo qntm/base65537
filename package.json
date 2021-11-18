@@ -7,15 +7,21 @@
     "type": "git",
     "url": "git://github.com/qntm/base65537.git"
   },
-  "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
+  "main": "src/base65537.js",
   "scripts": {
-    "test": "node test.js"
+		"lint": "npm run standard",
+		"pretest": "npm run lint",
+    "postpublish": "npm version patch && git push",
+		"standard": "standard",
+    "test": "node test/index.js"
   },
   "author": "qntm",
   "license": "MIT",
-  "dependencies": {
+  "dependencies": {},
+  "files": [
+    "src"
+  ],
+  "devDependencies": {
+    "standard": "^16.0.4"
   }
 }

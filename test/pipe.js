@@ -1,11 +1,11 @@
-"use strict";
+'use strict'
 
-require("../src/pipe.js");
+require('../src/pipe.js')
 
-var twice = function(n) {
-	return n + n;
-};
+const twice = function (n) {
+  return n + n
+}
 
-console.log((56).pipe(twice) === 112);
-console.log("abc".pipe(twice) === "abcabc");
-console.log();
+console.log((56).pipe(twice) === 112)
+console.log('abc'.pipe(twice) === 'abcabc')
+console.log()
