@@ -10,7 +10,7 @@
   "type": "module",
   "main": "src/index.js",
   "scripts": {
-    "mocha": "mocha",
+    "mocha": "c8 --100 mocha",
     "postpublish": "npm version patch && git push",
     "standard": "standard",
     "test": "npm run mocha"
@@ -22,6 +22,7 @@
     "src"
   ],
   "devDependencies": {
+    "c8": "^7.10.0",
     "mocha": "^9.1.3",
     "standard": "^16.0.4"
   }

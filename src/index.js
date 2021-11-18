@@ -292,12 +292,7 @@ export const encode = buf => bigIntToDigits(
   ),
   repRange
 )
-  .map(digit => {
-    if (!(digit in chrs)) {
-      throw Error(`Can't convert digit ${digit} to chr`)
-    }
-    return chrs[digit]
-  })
+  .map(digit => chrs[digit])
   .join('')
 
 export const decode = str => Buffer.from(
@@ -305,7 +300,7 @@ export const decode = str => Buffer.from(
     digitsToBigInt(
       [...str].map(chr => {
         if (!(chr in unchrs)) {
-          throw Error(`Can't convert character ${chr} to digit`)
+          throw Error(`Can't decode character ${chr}`)
         }
         return unchrs[chr]
       }),
