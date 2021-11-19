@@ -1,9 +1,0 @@
-require("./test/eq-array.js");
-require("./test/pipe.js");
-require("./test/buffer.js");
-require("./test/repertoire.js");
-require("./test/big-integer.js");
-require("./test/lexi.js");
-require("./test/conv.js");
-require("./test/build.js");
-require("./test/base65537.js");
