@@ -17,7 +17,10 @@ npm install base65537
 ```js
 import { encode, decode } from 'base65537'
 
-const buf = Buffer.from('d41d8cd98f00b204e9800998ecf8f11f', 'hex')
+const buf = Uint8Array.from([
+  0xd4, 0x1d, 0x8c, 0xd9, 0x8f, 0x00, 0xb2, 0x04,
+  0xe9, 0x80, 0x09, 0x98, 0xec, 0xf8, 0xf1, 0x1f
+])
 
 const str = encode(buf)
 console.log(str) // "䯕傺檸𥴏髌𡎱𦸜💩"

@@ -266,9 +266,9 @@ const chrs = [...repertoire]
 const unchrs = Object.fromEntries(Object.entries(chrs).map(([key, value]) => [value, key]))
 
 const repRange = BigInt(chrs.length)
-const byteRange = BigInt(Math.pow(2, 8))
+const byteRange = BigInt(1 << 8)
 
-// `digits` should be an array of integers from [0, base)
+// `digits` should be an array or `Uint8Array` of integers from [0, base)
 // `base` should be a BigInt
 const digitsToBigInt = (digits, base) =>
   digits.reduce((acc, digit) => acc * base + BigInt(digit) + 1n, 0n)
@@ -285,17 +285,11 @@ const bigIntToDigits = (bigInt, base) => {
   return digits
 }
 
-export const encode = buf => bigIntToDigits(
-  digitsToBigInt(
-    [...buf.values()],
-    byteRange
-  ),
-  repRange
-)
+export const encode = uint8Array => bigIntToDigits(digitsToBigInt(uint8Array, byteRange), repRange)
   .map(digit => chrs[digit])
   .join('')
 
-export const decode = str => Buffer.from(
+export const decode = str => Uint8Array.from(
   bigIntToDigits(
     digitsToBigInt(
       [...str].map(chr => {
