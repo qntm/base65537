@@ -1,6 +1,6 @@
 {
   "name": "base65537",
-  "version": "65538.0.0",
+  "version": "65538.0.1",
   "description": "Like Base65536, but one better",
   "homepage": "https://github.com/qntm/base65537",
   "repository": {
