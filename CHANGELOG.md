@@ -2,7 +2,7 @@
 
 ## 65539.0.0
 
-Support for Node.js 18 and lower is dropped.
+Support for Node.js 22 and lower is dropped.
 
 ## 65538.0.0
 
